@@ -1,0 +1,40 @@
+/* ============================================
+   EVERYDAY AI - SHOPIFY THEME BRANDING
+   Design System: Modern, Professional, Trust-Building
+   ============================================ */
+
+:root {
+    /* Dynamic colors from theme settings */
+    --primary: {{ settings.brand_primary | default: '#1d4035' }};
+    --accent: {{ settings.brand_accent | default: '#b85a1f' }};
+    --background: {{ settings.brand_warm_white | default: '#fefdfb' }};
+    --surface: {{ settings.brand_cream | default: '#f7f5f0' }};
+    
+    /* Typography */
+    --font-heading: 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Button System */
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* === Additional design tokens and utility classes === */
+/*
+   Add complete CSS system here: typography scales, spacing tokens,
+   form controls, link styles, cards, accessible focus states, and
+   responsive utilities. Keep LTR/RTL and high-contrast accessibility
+   in mind when expanding.
+*/
