@@ -1,0 +1,84 @@
+<section class="about-vlariel-section">
+  <div class="container">
+    <div class="about-vlariel-grid">
+      <div class="vlariel-profile">
+        {% if section.settings.vlariel_image %}
+          <img src="{{ section.settings.vlariel_image | image_url: width: 400 }}" 
+               alt="Vlariel Espinosa" class="vlariel-image">
+        {% endif %}
+        <div class="vlariel-bio">
+          <h2>{{ section.settings.title }}</h2>
+          <div class="vlariel-description">
+            {{ section.settings.description }}
+          </div>
+        </div>
+      </div>
+      
+      <div class="credentials-grid">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'credential' %}
+              <div class="credential-item">
+                <i class="{{ block.settings.icon }}"></i>
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.description }}</p>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Vlariel Espinosa",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "About Vlariel Espinosa"
+    },
+    {
+      "type": "image_picker",
+      "id": "vlariel_image",
+      "label": "Vlariel's Photo"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Bio Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "credential",
+      "name": "Credential",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Font Awesome Icon Class",
+          "default": "fas fa-graduation-cap"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Credential Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Credential Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Vlariel Espinosa"
+    }
+  ]
+}
+{% endschema %}
