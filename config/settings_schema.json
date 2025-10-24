@@ -34,6 +34,61 @@
     ]
   },
   {
+    "name": "Everyday AI Branding",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Brand Identity"
+      },
+      {
+        "type": "text",
+        "id": "site_title",
+        "label": "Site Title",
+        "default": "Everyday AI"
+      },
+      {
+        "type": "text",
+        "id": "site_subtitle",
+        "label": "Site Subtitle",
+        "default": "WITH VLARIEL ESPINOSA"
+      },
+      {
+        "type": "textarea",
+        "id": "site_tagline",
+        "label": "Site Tagline",
+        "default": "Free Monthly Town Hall • Newark, NJ & Online"
+      },
+      {
+        "type": "header",
+        "content": "Colors - Everyday AI Palette"
+      },
+      {
+        "type": "color",
+        "id": "brand_primary",
+        "label": "Primary (Forest Teal)",
+        "default": "#1d4035"
+      },
+      {
+        "type": "color",
+        "id": "brand_accent",
+        "label": "Accent (Burnt Sienna)",
+        "default": "#b85a1f"
+      },
+      {
+        "type": "color",
+        "id": "brand_warm_white",
+        "label": "Background (Warm White)",
+        "default": "#fefdfb"
+      },
+      {
+        "type": "color",
+        "id": "brand_cream",
+        "label": "Section Background (Cream)",
+        "default": "#f7f5f0"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
