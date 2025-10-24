@@ -1,0 +1,65 @@
+<section class="everyday-ai-hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ section.settings.title }}</h1>
+      <p class="hero-subtitle">{{ section.settings.subtitle }}</p>
+      <p class="hero-description">{{ section.settings.description }}</p>
+      
+      {% if section.settings.show_cta %}
+        <div class="hero-actions">
+          <a href="{{ section.settings.cta_link }}" class="btn-primary">
+            {{ section.settings.cta_text }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Everyday AI Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Hero Title",
+      "default": "Everyday AI"
+    },
+    {
+      "type": "text", 
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "WITH KEITH WILLIAMS"
+    },
+    {
+      "type": "textarea",
+      "id": "description", 
+      "label": "Description",
+      "default": "Free Monthly Town Hall • Newark, NJ & Online"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cta",
+      "label": "Show Call to Action",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Button Text",
+      "default": "Join Our Community"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Everyday AI Hero"
+    }
+  ]
+}
+{% endschema %}
