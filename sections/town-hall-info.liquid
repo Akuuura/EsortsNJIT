@@ -3,7 +3,7 @@
     <div class="town-hall-inner">
       {% if section.settings.image %}
         <div class="town-hall-media">
-          <img src="{{ section.settings.image | image_url: width: 1200 }}" alt="{{ section.settings.title }}" />
+          <img src="{{ section.settings.image | image_url: width: 1200 }}" alt="{{ section.settings.title }}" width="1200" height="800" loading="lazy" />
         </div>
       {% endif %}
 

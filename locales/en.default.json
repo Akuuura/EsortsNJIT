@@ -62,6 +62,9 @@
     "success": "Thanks for subscribing",
     "button_label": "Subscribe"
   },
+  "forms": {
+    "email": "Email"
+  },
   "accessibility": {
     "skip_to_text": "Skip to content",
     "skip_to_product_info": "Skip to product information",

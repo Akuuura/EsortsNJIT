@@ -38,3 +38,35 @@
    responsive utilities. Keep LTR/RTL and high-contrast accessibility
    in mind when expanding.
 */
+
+/* Basic styles for newly added sections */
+.everyday-ai-hero {
+    padding: 48px 0;
+    background-color: var(--background);
+}
+.everyday-ai-hero .hero-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.everyday-ai-hero .hero-title { font-family: var(--font-heading-family); font-size: 3.2rem; margin: 0 0 8px; color: var(--primary); }
+.everyday-ai-hero .hero-subtitle { font-size: 1.2rem; letter-spacing: 0.12rem; color: var(--primary); margin-bottom: 12px; }
+.everyday-ai-hero .hero-description { color: rgba(0,0,0,0.7); margin-bottom: 18px; }
+
+.about-vlariel-section { padding: 48px 0; background: var(--surface); }
+.about-vlariel-section .about-vlariel-grid { display: grid; grid-template-columns: 360px 1fr; gap: 28px; align-items: start; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.about-vlariel-section .vlariel-image { width: 100%; height: auto; border-radius: 8px; }
+.about-vlariel-section .credential-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; }
+.about-vlariel-section .credential-item i { font-size: 1.4rem; color: var(--accent); min-width: 28px; }
+
+.town-hall-info { padding: 40px 0; }
+.town-hall-info .town-hall-inner { display: grid; grid-template-columns: 1fr 520px; gap: 28px; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.town-hall-info .town-hall-media img { width: 100%; height: auto; border-radius: 8px; }
+.town-hall-info .town-hall-title { font-size: 2rem; margin: 0 0 8px; }
+
+.newsletter-signup { padding: 36px 0; background: linear-gradient(180deg, rgba(249,247,244,1) 0%, rgba(255,255,255,1) 100%); }
+.newsletter-signup .newsletter-inner { max-width: 700px; margin: 0 auto; padding: 0 20px; text-align: center; }
+.newsletter-signup input[type="email"] { padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.12); margin-right: 8px; max-width: 360px; width: 60%; }
+.newsletter-signup .btn-primary { vertical-align: middle; }
+
+@media (max-width: 900px) {
+    .about-vlariel-section .about-vlariel-grid { grid-template-columns: 1fr; }
+    .town-hall-info .town-hall-inner { grid-template-columns: 1fr; }
+    .newsletter-signup input[type="email"] { width: 100%; margin-bottom: 12px; }
+}

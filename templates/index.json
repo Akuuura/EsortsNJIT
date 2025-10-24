@@ -198,8 +198,54 @@
         "padding_bottom": 36
       }
     }
+    ,
+    "everyday-ai-hero": {
+      "type": "everyday-ai-hero",
+      "settings": {
+        "title": "Everyday AI",
+        "subtitle": "WITH KEITH WILLIAMS",
+        "description": "Free Monthly Town Hall • Newark, NJ & Online",
+        "show_cta": true,
+        "cta_text": "Join Our Community",
+        "cta_link": "/pages/join"
+      }
+    },
+    "about-vlariel": {
+      "type": "about-vlariel",
+      "settings": {
+        "title": "About Vlariel Espinosa",
+        "description": "Vlariel is a community leader and organizer focused on Everyday AI initiatives."
+      }
+    },
+    "town-hall-info": {
+      "type": "town-hall-info",
+      "settings": {
+        "title": "Town Hall",
+        "date": "First Thursday of the Month",
+        "time": "7:00 PM",
+        "location": "Newark, NJ & Online",
+        "description": "Join our free monthly Town Hall to discuss Everyday AI topics and community updates.",
+        "show_cta": true,
+        "cta_text": "Register",
+        "cta_link": "/pages/register"
+      }
+    },
+    "newsletter-signup": {
+      "type": "newsletter-signup",
+      "settings": {
+        "title": "Subscribe to our Newsletter",
+        "subtitle": "Get updates, events, and resources",
+        "placeholder": "you@domain.com",
+        "button_text": "Subscribe",
+        "note": "We respect your privacy. Unsubscribe anytime."
+      }
+    }
   },
   "order": [
+    "everyday-ai-hero",
+    "about-vlariel",
+    "town-hall-info",
+    "newsletter-signup",
     "image_banner",
     "rich_text",
     "featured_collection",
