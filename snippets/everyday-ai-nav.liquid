@@ -1,0 +1,29 @@
+{% if settings.show_everyday_ai_nav %}
+<nav class="everyday-ai-nav">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a href="{{ routes.root_url }}">
+        {% if settings.logo %}
+          <img src="{{ settings.logo | image_url: width: 150 }}" alt="{{ shop.name }}">
+        {% else %}
+          <span class="nav-title">{{ settings.site_title | default: shop.name }}</span>
+          <span class="nav-subtitle">{{ settings.site_subtitle }}</span>
+        {% endif %}
+      </a>
+    </div>
+    
+    <ul class="nav-menu">
+      <li><a href="{{ routes.root_url }}">Home</a></li>
+      <li><a href="#about-vlariel">About Vlariel</a></li>
+      <li><a href="#town-hall">Town Hall</a></li>
+      <li><a href="{{ routes.collections_url }}">Shop</a></li>
+      <li>
+        <a href="{{ routes.cart_url }}" class="cart-link">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">{{ cart.item_count }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endif %}
