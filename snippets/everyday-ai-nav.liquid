@@ -4,7 +4,7 @@
     <div class="nav-brand">
       <a href="{{ routes.root_url }}">
         {% if settings.logo %}
-          <img src="{{ settings.logo | image_url: width: 150 }}" alt="{{ shop.name }}">
+          {{ settings.logo | image_tag: width: 150, alt: shop.name }}
         {% else %}
           <span class="nav-title">{{ settings.site_title | default: shop.name }}</span>
           <span class="nav-subtitle">{{ settings.site_subtitle }}</span>
