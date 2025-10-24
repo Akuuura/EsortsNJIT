@@ -1,0 +1,47 @@
+<section class="town-hall-info">
+  <div class="container">
+    <div class="town-hall-inner">
+      {% if section.settings.image %}
+        <div class="town-hall-media">
+          <img src="{{ section.settings.image | image_url: width: 1200 }}" alt="{{ section.settings.title }}" />
+        </div>
+      {% endif %}
+
+      <div class="town-hall-content">
+        <h2 class="town-hall-title">{{ section.settings.title }}</h2>
+        <p class="town-hall-meta"><strong>{{ section.settings.date }}</strong> &mdash; {{ section.settings.time }}{% if section.settings.location %} • {{ section.settings.location }}{% endif %}</p>
+        <div class="town-hall-description">{{ section.settings.description }}</div>
+
+        {% if section.settings.show_cta %}
+          <p class="town-hall-actions">
+            <a href="{{ section.settings.cta_link }}" class="btn-primary">{{ section.settings.cta_text }}</a>
+          </p>
+        {% endif %}
+
+        {% if section.settings.show_map and section.settings.map_iframe %}
+          <div class="town-hall-map">{{ section.settings.map_iframe }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Town Hall Info",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Section Title", "default": "Town Hall" },
+    { "type": "text", "id": "date", "label": "Date", "default": "First Thursday of the Month" },
+    { "type": "text", "id": "time", "label": "Time", "default": "7:00 PM" },
+    { "type": "text", "id": "location", "label": "Location", "default": "Newark, NJ & Online" },
+    { "type": "image_picker", "id": "image", "label": "Background / Banner Image" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "Join our free monthly Town Hall to discuss Everyday AI topics and community updates." },
+    { "type": "checkbox", "id": "show_cta", "label": "Show Call to Action", "default": true },
+    { "type": "text", "id": "cta_text", "label": "CTA Text", "default": "Register" },
+    { "type": "url", "id": "cta_link", "label": "CTA Link" },
+    { "type": "checkbox", "id": "show_map", "label": "Show embedded map (paste iframe HTML below)", "default": false },
+    { "type": "textarea", "id": "map_iframe", "label": "Map iframe HTML", "default": "" }
+  ],
+  "presets": [ { "name": "Town Hall Info" } ]
+}
+{% endschema %}

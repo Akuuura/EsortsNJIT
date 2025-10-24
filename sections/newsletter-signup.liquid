@@ -1,0 +1,34 @@
+<section class="newsletter-signup">
+  <div class="container">
+    <div class="newsletter-inner">
+      <h2 class="newsletter-title">{{ section.settings.title }}</h2>
+      <p class="newsletter-subtitle">{{ section.settings.subtitle }}</p>
+
+      <form method="post" action="/contact#contact_form" accept-charset="UTF-8" class="newsletter-form" id="contact_form">
+        <input type="hidden" name="form_type" value="customer">
+        <input type="hidden" name="utf8" value="✓">
+
+        <label for="newsletter_email" class="visually-hidden">{{ 'forms.email' | t }}</label>
+        <input type="email" name="contact[email]" id="newsletter_email" placeholder="{{ section.settings.placeholder }}" required />
+
+        <button type="submit" class="btn-primary">{{ section.settings.button_text }}</button>
+      </form>
+
+      <p class="newsletter-note">{{ section.settings.note }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter Signup",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Title", "default": "Subscribe to our Newsletter" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Get updates, events, and resources" },
+    { "type": "text", "id": "placeholder", "label": "Email placeholder", "default": "you@domain.com" },
+    { "type": "text", "id": "button_text", "label": "Button text", "default": "Subscribe" },
+    { "type": "text", "id": "note", "label": "Note (small text below form)", "default": "We respect your privacy. Unsubscribe anytime." }
+  ],
+  "presets": [ { "name": "Newsletter Signup" } ]
+}
+{% endschema %}
