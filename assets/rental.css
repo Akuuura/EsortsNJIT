@@ -1,0 +1,53 @@
+.rental-form {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+.rental-form__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.rental-form__label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: rgb(var(--color-foreground));
+}
+.rental-form__input {
+  border: 1px solid rgba(var(--color-foreground), 0.12);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: rgb(var(--color-background));
+  color: rgba(var(--color-foreground), 0.95);
+}
+.rental-form__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.rental-form__duration {
+  font-weight: 600;
+  color: rgba(var(--color-foreground), 0.9);
+}
+.rental-form__error {
+  color: #b00020;
+  font-size: 0.9rem;
+}
+
+.rental-form__total {
+  font-weight: 700;
+  color: rgba(var(--color-foreground), 0.95);
+}
+
+.rental-form__per-day {
+  color: rgba(var(--color-foreground), 0.8);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 749px) {
+  .rental-form__fields {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="rental-form" data-rental data-base-price="{{ product.selected_or_first_available_variant.price }}" data-currency="{{ shop.currency }}" data-invalid-range-message="{{ 'rental.error_end_before_start' | t }}">
+  <div class="rental-form__fields">
+    <label class="rental-form__label">
+      <span class="rental-form__label-text">{{ 'rental.start_date' | t }}</span>
+      <input type="date" name="rental_start" class="rental-form__input rental-start" />
+    </label>
+
+    <label class="rental-form__label">
+      <span class="rental-form__label-text">{{ 'rental.end_date' | t }}</span>
+      <input type="date" name="rental_end" class="rental-form__input rental-end" />
+    </label>
+  </div>
+
+  <div class="rental-form__meta">
+    <div class="rental-form__duration">{{ 'rental.duration' | t }}: <span class="rental-days">0</span> {{ 'rental.days' | t }}</div>
+    <div class="rental-form__error" role="alert" hidden></div>
+    <div class="rental-form__per-day">(<span class="rental-per-day-amount"></span>/day)</div>
+    <div class="rental-form__total">{{ 'rental.total' | t }}: <span class="rental-total" aria-live="polite"></span></div>
+  </div>
+
+  <!-- Hidden properties to attach to line item -->
+  <input type="hidden" name="properties[rental_start]" class="rental-prop-start" />
+  <input type="hidden" name="properties[rental_end]" class="rental-prop-end" />
+  <input type="hidden" name="properties[rental_days]" class="rental-prop-days" />
+</div>
