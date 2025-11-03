@@ -1,0 +1,350 @@
+/* Professional Enhancements for Esorts Theme */
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Improved button hover effects */
+.button,
+button,
+[type="submit"],
+.shopify-payment-button__button {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+button:hover,
+[type="submit"]:hover,
+.shopify-payment-button__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 217, 255, 0.3);
+}
+
+.button:active,
+button:active,
+[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Card hover effects */
+.card-wrapper,
+.card,
+.product-card-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-wrapper:hover,
+.card:hover,
+.product-card-wrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.4s ease;
+}
+
+/* Professional link hover effects */
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* Enhanced header */
+.header {
+  backdrop-filter: blur(10px);
+  background: rgba(26, 29, 46, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Professional form inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  outline: none;
+}
+
+/* Professional section spacing */
+.shopify-section {
+  position: relative;
+}
+
+/* Gradient overlays for banners */
+.banner__content {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Professional product grid */
+.collection .grid {
+  gap: 24px;
+}
+
+/* Enhanced price display */
+.price {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.price--on-sale .price-item--sale {
+  color: #00d9ff;
+}
+
+/* Professional badges */
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Professional announcement bar */
+.announcement-bar {
+  background: linear-gradient(90deg, #4a90e2, #5865f2);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Enhanced navigation */
+.header__menu-item {
+  position: relative;
+}
+
+.header__menu-item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00d9ff;
+  transition: width 0.3s ease;
+}
+
+.header__menu-item:hover::after,
+.header__menu-item.active::after {
+  width: 100%;
+}
+
+/* Professional cart drawer */
+.drawer {
+  background: rgba(26, 29, 46, 0.98);
+  backdrop-filter: blur(20px);
+}
+
+/* Enhanced product cards */
+.card__inner {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card__inner:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Professional video section */
+.video-section__media {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Enhanced typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.h0 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* Professional footer */
+.footer {
+  background: rgba(13, 17, 23, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle animations on scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Professional loading spinner */
+.loading-overlay__spinner {
+  border-color: rgba(74, 144, 226, 0.2);
+  border-top-color: #4a90e2;
+}
+
+/* Enhanced quick add button */
+.quick-add__submit {
+  background: linear-gradient(135deg, #4a90e2, #5865f2);
+}
+
+.quick-add__submit:hover {
+  background: linear-gradient(135deg, #5865f2, #4a90e2);
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.4);
+}
+
+/* Professional search overlay */
+.search-modal {
+  background: rgba(26, 29, 46, 0.98);
+  backdrop-filter: blur(20px);
+}
+
+/* Enhanced predictive search */
+.predictive-search {
+  background: rgba(22, 25, 40, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Professional pagination */
+.pagination__item {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.pagination__item:hover {
+  background: rgba(74, 144, 226, 0.1);
+  transform: scale(1.05);
+}
+
+.pagination__item--current {
+  background: #4a90e2;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+/* Enhanced product info */
+.product__info-wrapper {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Professional quantity selector */
+.quantity__button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quantity__button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #4a90e2;
+}
+
+/* Smooth page transitions */
+.shopify-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Professional social icons */
+.social-icons a {
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px) scale(1.1);
+  color: #00d9ff;
+}
+
+/* Enhanced newsletter signup */
+.newsletter-form__field-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.newsletter-form__button {
+  background: linear-gradient(135deg, #4a90e2, #00d9ff);
+  font-weight: 600;
+}
+
+.newsletter-form__button:hover {
+  background: linear-gradient(135deg, #00d9ff, #4a90e2);
+  box-shadow: 0 8px 24px rgba(0, 217, 255, 0.4);
+}
+
+/* Accessibility improvements */
+:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for mobile menu */
+.menu-drawer {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Professional product variant pills */
+.product-form__input input[type="radio"] + label {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.2s ease;
+}
+
+.product-form__input input[type="radio"]:checked + label {
+  border-color: #4a90e2;
+  background: rgba(74, 144, 226, 0.15);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.product-form__input input[type="radio"] + label:hover {
+  border-color: #4a90e2;
+  background: rgba(74, 144, 226, 0.08);
+  transform: scale(1.02);
+}
