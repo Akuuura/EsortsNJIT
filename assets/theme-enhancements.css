@@ -1,11 +1,31 @@
-/* Professional Enhancements for Esorts Theme */
+/* Professional Enhancements for Esports Theme */
 
-/* Smooth transitions for all interactive elements */
-* {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Ensure high contrast for all text */
+body {
+  color: #e8eaf0 !important;
 }
 
-/* Improved button hover effects */
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #ffffff !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* High contrast for links */
+a {
+  color: #00d4ff;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  color: #00ff88;
+  opacity: 1;
+}
+
+/* Esports-style neon glow effects */
 .button,
 button,
 [type="submit"],
@@ -14,6 +34,11 @@ button,
   overflow: hidden;
   transform: translateY(0);
   transition: all 0.3s ease;
+  background: linear-gradient(135deg, #00d4ff, #7c3aed) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .button:hover,
@@ -21,51 +46,90 @@ button:hover,
 [type="submit"]:hover,
 .shopify-payment-button__button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 217, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
-.button:active,
-button:active,
-[type="submit"]:active {
-  transform: translateY(0);
+.button--secondary {
+  background: transparent !important;
+  border: 2px solid #00d4ff !important;
+  color: #00d4ff !important;
 }
 
-/* Card hover effects */
+.button--secondary:hover {
+  background: rgba(0, 212, 255, 0.1) !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+/* Enhanced header with better contrast */
+.header {
+  backdrop-filter: blur(15px);
+  background: rgba(10, 14, 26, 0.95) !important;
+  border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+.header__heading-link,
+.header__menu-item {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.header__menu-item:hover {
+  color: #00d4ff !important;
+}
+
+.header__menu-item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4ff, #7c3aed);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.header__menu-item:hover::after,
+.header__menu-item.active::after {
+  width: 100%;
+}
+
+/* Card hover effects with neon glow */
 .card-wrapper,
 .card,
 .product-card-wrapper {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(26, 31, 53, 0.6) !important;
+  border: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .card-wrapper:hover,
 .card:hover,
 .product-card-wrapper:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 212, 255, 0.3), 0 0 20px rgba(124, 58, 237, 0.2);
+  border-color: rgba(0, 212, 255, 0.5);
 }
 
-/* Smooth image loading */
-img {
-  transition: opacity 0.4s ease;
+.card__heading,
+.card__information,
+.card-information {
+  color: #ffffff !important;
 }
 
-/* Professional link hover effects */
-a {
-  transition: color 0.2s ease, opacity 0.2s ease;
+/* Price with high contrast */
+.price {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #00ff88 !important;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
 }
 
-a:hover {
-  opacity: 0.85;
+.price--on-sale .price-item--sale {
+  color: #ff0080 !important;
 }
 
-/* Enhanced header */
-.header {
-  backdrop-filter: blur(10px);
-  background: rgba(26, 29, 46, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Professional form inputs */
+/* Professional form inputs with esports styling */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -73,8 +137,9 @@ input[type="number"],
 input[type="date"],
 select,
 textarea {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(26, 31, 53, 0.8) !important;
+  border: 2px solid rgba(0, 212, 255, 0.3) !important;
+  color: #ffffff !important;
   transition: all 0.3s ease;
 }
 
@@ -85,220 +150,146 @@ input[type="number"]:focus,
 input[type="date"]:focus,
 select:focus,
 textarea:focus {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: #4a90e2;
-  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  background: rgba(26, 31, 53, 0.95) !important;
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2), 0 0 20px rgba(0, 212, 255, 0.3);
   outline: none;
 }
 
-/* Professional section spacing */
-.shopify-section {
-  position: relative;
+/* Banner text with strong shadow for readability */
+.banner__content,
+.banner__heading,
+.banner__text {
+  color: #ffffff !important;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Gradient overlays for banners */
-.banner__content {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+.banner__box {
+  background: rgba(10, 14, 26, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.3);
 }
 
-/* Professional product grid */
-.collection .grid {
-  gap: 24px;
-}
-
-/* Enhanced price display */
-.price {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.price--on-sale .price-item--sale {
-  color: #00d9ff;
-}
-
-/* Professional badges */
+/* Professional badges with esports colors */
 .badge {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #7c3aed, #ff0080) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+}
+
+/* Announcement bar with vibrant esports gradient */
+.announcement-bar {
+  background: linear-gradient(90deg, #00d4ff, #7c3aed, #ff0080) !important;
+  color: #ffffff !important;
   font-weight: 600;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  padding: 6px 12px;
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Loading states */
-.loading {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-/* Professional announcement bar */
-.announcement-bar {
-  background: linear-gradient(90deg, #4a90e2, #5865f2);
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
-/* Enhanced navigation */
-.header__menu-item {
-  position: relative;
-}
-
-.header__menu-item::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #00d9ff;
-  transition: width 0.3s ease;
-}
-
-.header__menu-item:hover::after,
-.header__menu-item.active::after {
-  width: 100%;
-}
-
-/* Professional cart drawer */
-.drawer {
-  background: rgba(26, 29, 46, 0.98);
-  backdrop-filter: blur(20px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Enhanced product cards */
 .card__inner {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(26, 31, 53, 0.8) !important;
+  border: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .card__inner:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(26, 31, 53, 0.95) !important;
+  border-color: rgba(0, 212, 255, 0.5);
 }
 
-/* Professional video section */
-.video-section__media {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
-
-/* Enhanced typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.h0 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-}
-
-/* Professional footer */
+/* Professional footer with high contrast */
 .footer {
-  background: rgba(13, 17, 23, 0.95);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 14, 26, 0.98) !important;
+  border-top: 2px solid rgba(0, 212, 255, 0.3);
 }
 
-/* Subtle animations on scroll */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.footer__content-top,
+.footer__content-bottom,
+.footer h2,
+.footer a,
+.footer p {
+  color: #e8eaf0 !important;
 }
 
-.animate-on-scroll {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Professional loading spinner */
-.loading-overlay__spinner {
-  border-color: rgba(74, 144, 226, 0.2);
-  border-top-color: #4a90e2;
+.footer a:hover {
+  color: #00d4ff !important;
 }
 
 /* Enhanced quick add button */
 .quick-add__submit {
-  background: linear-gradient(135deg, #4a90e2, #5865f2);
+  background: linear-gradient(135deg, #00d4ff, #7c3aed) !important;
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
 }
 
 .quick-add__submit:hover {
-  background: linear-gradient(135deg, #5865f2, #4a90e2);
-  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.4);
-}
-
-/* Professional search overlay */
-.search-modal {
-  background: rgba(26, 29, 46, 0.98);
-  backdrop-filter: blur(20px);
-}
-
-/* Enhanced predictive search */
-.predictive-search {
-  background: rgba(22, 25, 40, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #7c3aed, #00d4ff) !important;
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.5), 0 0 20px rgba(124, 58, 237, 0.3);
 }
 
 /* Professional pagination */
 .pagination__item {
   border-radius: 8px;
   transition: all 0.2s ease;
+  background: rgba(26, 31, 53, 0.6);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  color: #ffffff !important;
 }
 
 .pagination__item:hover {
-  background: rgba(74, 144, 226, 0.1);
+  background: rgba(0, 212, 255, 0.2);
+  border-color: #00d4ff;
   transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
 }
 
 .pagination__item--current {
-  background: #4a90e2;
-  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  background: linear-gradient(135deg, #00d4ff, #7c3aed) !important;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.4);
 }
 
-/* Enhanced product info */
+/* Enhanced product info with better contrast */
 .product__info-wrapper {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(26, 31, 53, 0.8) !important;
   border-radius: 16px;
   padding: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.product__title,
+.product__text,
+.product-form__label {
+  color: #ffffff !important;
 }
 
 /* Professional quantity selector */
 .quantity__button {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(26, 31, 53, 0.8) !important;
+  border: 2px solid rgba(0, 212, 255, 0.3) !important;
+  color: #ffffff !important;
 }
 
 .quantity__button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #4a90e2;
+  background: rgba(0, 212, 255, 0.2) !important;
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
 
-/* Smooth page transitions */
-.shopify-section {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Professional social icons */
+/* Professional social icons with glow */
 .social-icons a {
   transition: all 0.3s ease;
+  color: #e8eaf0 !important;
 }
 
 .social-icons a:hover {
   transform: translateY(-3px) scale(1.1);
-  color: #00d9ff;
+  color: #00d4ff !important;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
 }
 
 /* Enhanced newsletter signup */
@@ -309,42 +300,83 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .newsletter-form__button {
-  background: linear-gradient(135deg, #4a90e2, #00d9ff);
+  background: linear-gradient(135deg, #00d4ff, #7c3aed) !important;
   font-weight: 600;
+  color: #ffffff !important;
 }
 
 .newsletter-form__button:hover {
-  background: linear-gradient(135deg, #00d9ff, #4a90e2);
-  box-shadow: 0 8px 24px rgba(0, 217, 255, 0.4);
-}
-
-/* Accessibility improvements */
-:focus-visible {
-  outline: 2px solid #4a90e2;
-  outline-offset: 2px;
-}
-
-/* Smooth transitions for mobile menu */
-.menu-drawer {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #7c3aed, #00d4ff) !important;
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.5), 0 0 20px rgba(124, 58, 237, 0.3);
 }
 
 /* Professional product variant pills */
 .product-form__input input[type="radio"] + label {
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  background: rgba(26, 31, 53, 0.6);
+  color: #ffffff !important;
   transition: all 0.2s ease;
 }
 
 .product-form__input input[type="radio"]:checked + label {
-  border-color: #4a90e2;
-  background: rgba(74, 144, 226, 0.15);
-  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  border-color: #00d4ff;
+  background: rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.3), 0 0 20px rgba(0, 212, 255, 0.3);
+  color: #ffffff !important;
 }
 
 .product-form__input input[type="radio"] + label:hover {
-  border-color: #4a90e2;
-  background: rgba(74, 144, 226, 0.08);
+  border-color: #00d4ff;
+  background: rgba(0, 212, 255, 0.15);
   transform: scale(1.02);
+}
+
+/* Accessibility improvements with high contrast */
+:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+/* Collection and section titles */
+.collection-hero__title,
+.collection__title,
+.title,
+.section-heading {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Filter and sort buttons */
+.facets__summary,
+.facets__button,
+.collection-filters__button {
+  background: rgba(26, 31, 53, 0.8) !important;
+  border: 2px solid rgba(0, 212, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.facets__summary:hover,
+.facets__button:hover,
+.collection-filters__button:hover {
+  background: rgba(0, 212, 255, 0.2) !important;
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Rich text section contrast */
+.rich-text__heading,
+.rich-text__text {
+  color: #ffffff !important;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
