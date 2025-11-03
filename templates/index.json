@@ -6,14 +6,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Esorts",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Rent Esports equipment for tournaments or practice",
             "text_style": "body"
           }
         },
@@ -22,7 +22,7 @@
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -35,9 +35,9 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 60,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
@@ -52,14 +52,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "What is Esorts?",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Esorts is the all-in-one rental platform built specifically for esports tournaments. We make it easy for event organizers to rent high-performance gaming PCs, consoles, peripherals, and stage gear without the hassle of owning them year-round. Whether it's a small LAN or a major national competition, Esorts delivers reliable, tournament-ready setups on your terms — saving time, reducing costs, and ensuring every match runs at peak performance.<\/p>"
           }
         }
       },
@@ -71,7 +71,7 @@
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "featured_collection": {
@@ -80,17 +80,17 @@
         "title": "Featured products",
         "heading_size": "h2",
         "collection": "all",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
-        "show_view_all": false,
+        "show_view_all": true,
         "swipe_on_mobile": false,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 28,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -127,7 +127,7 @@
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -135,12 +135,12 @@
     "video": {
       "type": "video",
       "settings": {
-        "heading": "",
+        "heading": "Experience Esports",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "heading_size": "h1",
         "description": "",
         "full_width": false,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -151,8 +151,8 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Console",
+            "text": "<p>Rent top gaming consoles for your next tournament. From PlayStation to Xbox, we've got you covered with the latest hardware.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -160,8 +160,8 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Content",
+            "text": "<p>Host your tournament with confidence. Professional setups and reliable equipment delivered when you need it, where you need it.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -169,8 +169,8 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Creation",
+            "text": "<p>Build unforgettable esports experiences. Access tournament-grade gear without the commitment of purchasing.<\/p>",
             "link_label": "",
             "link": ""
           }
